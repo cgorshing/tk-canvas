@@ -20,8 +20,8 @@ def read_shapes(file_path):
             line = line.strip()
             tokens = line.split()
             shape = tokens[0]
-            print(f"Hitting {tokens[1]}")
-            print(f"Hitting {tokens}")
+            # print(f"Hitting {tokens[1]}")
+            # print(f"Hitting {tokens}")
             params = list(map(float, tokens[1].split(',')))
             shapes.append([shape] + params)
 
@@ -59,7 +59,7 @@ def draw_canvas(canvas, canvas_width, canvas_height, x_center, y_center, pixels_
             xc = (x - x_center) * pixels_per_unit + canvas_width / 2
             yc = (-y + y_center) * pixels_per_unit + canvas_height / 2
             rad = diameter / 2 * pixels_per_unit
-            print(f"Drawing at {xc - rad} - {yc - rad}, {xc + rad} - {yc +rad}")
+            # print(f"Drawing at {xc - rad}, {yc - rad} and {xc + rad}, {yc +rad}")
             canvas.create_oval(xc - rad, yc - rad, xc + rad, yc + rad, outline="white")
 
             rad_h = diameter / 3 * pixels_per_unit
